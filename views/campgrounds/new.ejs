@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center"> New Campground</h1>
+    <div class="col-md-6 offset-md-3">
+        <form action="/campgrounds" method ="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-2">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" type="text" id="title" name="campground[title]" required>
+            <div class="valid-feedback">Looks Good</div>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" for="location">Location</label>
+            <input  class="form-control"  type="text" id="location" name="campground[location]" required>
+            <div class="valid-feedback">Looks Good</div>
+            </div>
+       
+          
+          
+            <div class="mb-2">
+                <label class="form-label" for="description">description</label>
+            <textarea  class="form-control"  type="text" id="description" name="campground[description]" required>
+               </textarea>
+                <div class="valid-feedback">Looks Good</div>
+           <div>   
+             <div class="mb-2">
+            <label for="">Upload Images</label>
+            <div class="input-group  ">
+                
+                <input type="file" class="form-control" id="image" name ="image" multiple>
+                <label class="input-group-text" for="inputGroupFile02">Upload
+                <!-- <span class="input-group-text custom-file-label" ></span></label> -->
+              </div>
+           </div>
+            <button class="btn btn-success mt-3">Add Campground</button>
+           </div>
+
+    </div>
+</div>
+ 
